@@ -20,9 +20,9 @@ const Homepage = () => {
       // api call
       await getRequest(startRoute.routeId)
                 .then(res => setRouteCoords(res))
-                .catch(error => alert('server occured...'));
+                .catch(error => alert('server error occured...'));
 
-    }, [startRoute.route]);
+    }, [startRoute.routeId]);
 
 
     useEffect(() => {

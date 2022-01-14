@@ -24,7 +24,7 @@ const List = (props) => {
                                 <button 
                                   type="button" 
                                   class="btn btn-success btn-sm"
-                                  onClick = {() => setStartRoute({route: 'office'})}> START</button>
+                                  onClick = {() => setStartRoute({routeId: 'office'})}> START</button>
                             </p>
                             <div className={`status-leveller level-1 mb-3`}>
                                 <div className="leveller-circle leveller-1"><i className="fas fa-home"></i></div>
@@ -37,7 +37,7 @@ const List = (props) => {
                                 <button 
                                   type="button" 
                                   class="btn btn-success btn-sm"
-                                  onClick = {() => setStartRoute({route: 'lunch'})}> START </button>
+                                  onClick = {() => setStartRoute({routeId: 'lunch'})}> START </button>
                             </p>
                             <div className={`status-leveller level-1 mb-3`}>
                                 <div className="leveller-circle leveller-1"><i className="fas fa-building"></i></div>
@@ -50,7 +50,7 @@ const List = (props) => {
                                 <button 
                                   type="button" 
                                   class="btn btn-success btn-sm"
-                                  onClick = {() => setStartRoute({route: 'home'})}> START </button>
+                                  onClick = {() => setStartRoute({routeId: 'office'})}> START </button>
                             </p>
                             <div className={`status-leveller level-1 mb-3`}>
                                 <div className="leveller-circle leveller-1"><i className="fas fa-building"></i></div>
