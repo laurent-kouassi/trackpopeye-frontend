@@ -1,38 +1,60 @@
-.App {
+:root {
+  --api-color:#682020;
+  --api-icon-color:#7cade1
+}
+
+#root{
+  height: 100%;
+}
+
+/* .map-control-group-new {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.map-control-new {
+  font-size: 18px;
+  color: #000;
+  background: #fff;
+  border-radius: 50%;
+  border: solid 3px;        
   text-align: center;
+  height: 32px;
+  width: 32px;
+  padding-top: 2px;
+  margin: 3px 0; 
+  cursor: pointer; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.layer-switcher-new > .layersDiv {
+  background-color: #fff;
+  color: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.layer-switcher-new {
+  top: 20px;
+  right: 60px;
+  font-size: 0.8em;
+  border: solid 1px #ccc;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.olControlLayerSwitcher .layersDiv {
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+} */
+/* 
+.olControlLayerSwitcher .layersDiv .baseLbl, .olControlLayerSwitcher .layersDiv .dataLbl {
+  margin-top: 3px;
+  margin-left: 3px;
+  margin-bottom: 3px;
+} */
+
+
+.main-section{
+  /* background-color: #6E6C82; */
+  background: var(--api-color)
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
