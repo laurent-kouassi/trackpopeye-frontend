@@ -1,7 +1,6 @@
 
 
-# TRAPPOPEYE-FRONTEND Express + MongoDB Server
-
+# TRAPPOPEYE-FRONTEND
 
 ## Features
 
