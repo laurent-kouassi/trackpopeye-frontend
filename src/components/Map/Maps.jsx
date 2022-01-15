@@ -27,12 +27,13 @@ const Maps = (props) => {
     });
 
     const position = coords;
+    const center = position && position.length > 0 ? position[0] : [14.340945482254028,35.96093506939264];
 
     return (
         <section className="map-section">
             <MapContainer
                center={center}
-               zoom={13} 
+               zoom={11} 
                scrollWheelZoom={true} style={{height: window.innerHeight, width: window.innerWidth}}>
                 <TileLayer
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -40,8 +41,9 @@ const Maps = (props) => {
                 />
 
                 { 
+                  position &&
                   position.length > 0 && 
-                  <Marker position = { position } icon = { routeId == 'lunch-route' ? personIcon : carIcon }></Marker>
+                  position?.map(pos => <Marker position = { pos } icon = { routeId == 'lunch' ? personIcon : carIcon }></Marker>)
                 }
 
             </MapContainer>

@@ -21,7 +21,7 @@
     flex-grow: 1;
     min-width: 0;
     max-width: 100%;
-    background: var(--api-color)
+    background: var(--root-color)
 }
 
 .main-section {

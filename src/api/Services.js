@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { BASE_URL } from "./Env";
 
 
@@ -8,5 +9,6 @@ export const getRequest = async (routeId) => {
                        })
                       .catch(error => {
                          console.log(error);
+                         return error;
                       })
    };

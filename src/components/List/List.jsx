@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Col, Button } from 'react-bootstrap';
 
 const List = (props) => {
-    const { setStartRoute } = props;
+    const {startRoute, setStartRoute } = props;
 
 
     return (
@@ -24,7 +24,8 @@ const List = (props) => {
                                 <button 
                                   type="button" 
                                   class="btn btn-success btn-sm"
-                                  onClick = {() => setStartRoute({routeId: 'office'})}> START</button>
+                                  disabled= { startRoute.routeId === 'office' && true }
+                                  onClick = {() => setStartRoute({routeId: 'office'})}>{ startRoute.routeId == 'office' ? 'Going to office...' : "START"}</button>
                             </p>
                             <div className={`status-leveller level-1 mb-3`}>
                                 <div className="leveller-circle leveller-1"><i className="fas fa-home"></i></div>
@@ -37,7 +38,8 @@ const List = (props) => {
                                 <button 
                                   type="button" 
                                   class="btn btn-success btn-sm"
-                                  onClick = {() => setStartRoute({routeId: 'lunch'})}> START </button>
+                                  disabled= { startRoute.routeId === 'lunch' && true }
+                                  onClick = {() => setStartRoute({routeId: 'lunch'})}>{ startRoute.routeId == 'lunch' ? 'Going to lunch...' : "START"}</button>
                             </p>
                             <div className={`status-leveller level-1 mb-3`}>
                                 <div className="leveller-circle leveller-1"><i className="fas fa-building"></i></div>
@@ -50,7 +52,8 @@ const List = (props) => {
                                 <button 
                                   type="button" 
                                   class="btn btn-success btn-sm"
-                                  onClick = {() => setStartRoute({routeId: 'office'})}> START </button>
+                                  disabled= { startRoute.routeId === 'home' && true }
+                                  onClick = {() => setStartRoute({routeId: 'home'})}>{ startRoute.routeId == 'home' ? 'Going home...' : "START"}</button>
                             </p>
                             <div className={`status-leveller level-1 mb-3`}>
                                 <div className="leveller-circle leveller-1"><i className="fas fa-building"></i></div>

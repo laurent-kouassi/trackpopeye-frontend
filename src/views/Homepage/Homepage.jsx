@@ -7,38 +7,44 @@ import { getRequest } from '../../api/Services';
 
 const Homepage = () => {
     const [startRoute, setStartRoute] = useState({
-            routeId: ''
+            routeId: 'office'
        });
-    const [routeCoords, setRouteCoords] = useState([]);
+    const [routeCoords, setRouteCoords] = useState({
+      coordinates: [[14.340945482254028,35.96093506939264]],
+      routeId: 'office' // test
+    });
 
-    // const longitude = routeCoords[0];
-    // const latitude = routeCoords[1];
-    const dataReady = routeCoords.length > 0 ? true : true;  // temp
+    // if notthing found on the server
+    const fallback = {
+      coordinates: [[14.340945482254028,35.96093506939264]],
+      routeId: startRoute.routeId
+    };
+
+
+    const dataReady = routeCoords && routeCoords.length > 0 ? true : false;  // temp
 
 
     useEffect(async () => {
       // api call
       await getRequest(startRoute.routeId)
                 .then(res => setRouteCoords(res))
-                .catch(error => alert('server error occured...'));
+                .catch(error => alert('server erroroccured...' + error));
 
     }, [startRoute.routeId]);
 
 
-    useEffect(() => {
-      if(dataReady) console.log(dataReady);
-    }, [dataReady]);
+    return(
+            <main className = "main-wrapper">
+              <List startRoute = { startRoute } setStartRoute = { setStartRoute }/>
+             { 
+                // dataReady ? 
 
-    return  dataReady ?
-          (
-            <main className = "main-wrapper">
-              <List setStartRoute = { setStartRoute }/>
-              <Maps coords = { routeCoords.coordinates } routeId = { routeCoords.routeId } />
-            </main>
-          ) : 
-          (
-            <main className = "main-wrapper">
-              "Loading..."
+                   <Maps 
+                      coords = {routeCoords && routeCoords.coordinates ? routeCoords.coordinates : fallback.coordinates } 
+                      routeId = { routeCoords && routeCoords.routeId ? routeCoords.routeId : fallback.routeId  } /> 
+
+                  //  <div>Loading...</div>
+              }
             </main>
           )
 };
