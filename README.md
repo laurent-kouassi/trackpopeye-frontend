@@ -1,23 +1,29 @@
-# TRACK POPEYE WALKTHROUGH
-
-## Available Scripts
 
 
+# TRAPPOPEYE-FRONTEND
 
-### `npm start`
+## Features
+
+- ReactJS
+- REST API
+- BoostrapUI
+- Leaflet Map
+
+## Requirements
+
+- [node & npm](https://nodejs.org/en/)
+
+## Installation
+
+- `git clone https://github.com/laurent-kouassi/trackpopeye-frontend.git`
+- `cd trackpopeye-frontend`
+- `npm install`
+- `npm start`
+
+### Server
+
+- start the server
+- https://github.com/laurent-kouassi/trappopeye-backend
 
 
-### `npm test`
-
-
-### `npm run build`
-
-
-
-### `npm run eject`
-
-
-### Code Splitting
-
-# trackpopeye-frontend
 # trackpopeye-frontend
